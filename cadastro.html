@@ -6,9 +6,11 @@
     <title>Formulario</title>
 </head>
 <body>
-    <form action="cadastro.php">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <fieldset>
-            <legend>Dados Pessoais</legend>
+            <h1>
+                <legend>Dados Pessoais</legend>
+            </h1>           
             <p>
                 <label for="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome" required>
@@ -77,7 +79,7 @@
                <option value="sc">SC</option>
                <option value="sp">SP</option>
                <option value="se">SE</option>
-               <option value="to">To</option>
+               <option value="to">TO</option>
                </select>
            </p>
            <p><input type="submit" value="Enviar"></p>
