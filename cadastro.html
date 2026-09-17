@@ -14,40 +14,48 @@
             </h2>           
             <p>
                 <label for="nome">Nome Completo</label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome" 
+                placeholder="Seu nome"
+                required>
             </p>
             <p>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email"
+                placeholder="Seu E-mail"
                 required>
             </p>
             <p>
                 <label for="data_nascimento">Data de Nascimento</label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <input type="date" name="data_nascimento" id="data_nascimento"
+                required>
             </p>
             <p>
                 <label for="telefone">Telefone</label>
                 <input type="text" name="telefone" id="telefone" 
                            pattern="\(\d{2}\)\s9\d{4}-\d{4}"
                            maxlength="15" 
+                           placeholder="Seu telefone"
                            required>
             </p>
            <p>
                <label for="cpf">CPF</label>
                <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
                maxlength="14"
+               placeholder="Seu CPF"
                required>
            </p>
            <p>
                <label for="cep">CEP</label>
                <input type="text" name="cep" id="cep" pattern="\d{5}-\d{3}"
                maxlength="9" size="11"
+               placeholder="Seu CEP"
                required>
            </p>
            <p>
                <label for="cidade">Cidade</label>
                <input type="text" name="cidade" id="cidade"
                maxlength="35"
+               placeholder="Sua cidade"
                required>
            </p>
            <p>
