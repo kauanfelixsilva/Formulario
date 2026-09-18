@@ -20,5 +20,7 @@
             <input type="submit" value="Entrar">
         </p>
     </form>
+
+    <p><button><a href="cadastro.html">Criar conta</a></button></p> 
 </body>
 </html>
