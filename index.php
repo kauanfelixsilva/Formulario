@@ -10,17 +10,22 @@
     <form action="cadastro.php" method="post">
         <p>
             <label for="user">Usuario</label>
-            <input type="text" name="user" id="user">
+            <input type="text" name="user" id="user"
+            minlength="5"
+            require>
         </p>
         <p>
             <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha"
+            minlength="8">
         </p>
-        <p>
-            <input type="submit" value="Entrar">
+        <p>  
+        <button>
+            <a href="home.php">Entrar</a>
+        </button>
         </p>
     </form>
 
-    <p><button><a href="cadastro.html">Criar conta</a></button></p> 
+    <p><button><a href="cadastro.php">Criar conta</a></button></p> 
 </body>
 </html>
