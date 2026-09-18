@@ -11,24 +11,28 @@
         <fieldset>
             <h2>
                 <legend>Dados Pessoais</legend>
-            </h2>           
+            </h2> 
+
             <p>
                 <label for="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome" 
                 placeholder="Seu nome"
                 required>
             </p>
+
             <p>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email"
                 placeholder="Seu E-mail"
                 required>
             </p>
+
             <p>
                 <label for="data_nascimento">Data de Nascimento</label>
                 <input type="date" name="data_nascimento" id="data_nascimento"
                 required>
             </p>
+
             <p>
                 <label for="telefone">Telefone</label>
                 <input type="text" name="telefone" id="telefone" 
@@ -37,11 +41,13 @@
                            placeholder="Seu telefone"
                            required>
             </p>
+
             <p>
                 <label for="sexo">Sexo</label><br>
                 <input type="radio" name="sexo" id="sexmas" required> <label for="sexomas">Masculino</label>
                 <input type="radio" name="sexo" id="sexofem" required> <label for="sexofem">Feminino</label>
             </p>
+
            <p>
                <label for="cpf">CPF</label>
                <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
@@ -49,6 +55,7 @@
                placeholder="Seu CPF"
                required>
            </p>
+
            <p>
                <label for="cep">CEP</label>
                <input type="text" name="cep" id="cep" pattern="\d{5}-\d{3}"
@@ -56,6 +63,7 @@
                placeholder="Seu CEP"
                required>
            </p>
+
            <p>
                <label for="cidade">Cidade</label>
                <input type="text" name="cidade" id="cidade"
@@ -63,6 +71,7 @@
                placeholder="Sua cidade"
                required>
            </p>
+
            <p>
                <label for="estados">Estado  </label>
                <select name="" id="" required>
@@ -96,9 +105,29 @@
                <option value="to">TO</option>
                </select>
            </p>
-           <p><input type="submit" value="Enviar"></p>
+
+           <p>
+            <label for="user">Usuario</label>
+            <input type="text" name="user" id="user"
+            maxlength="15"
+            require>
+           </p>
+
+           <p>
+               <label for="senha">Senha</label>
+               <input type="password" name="senha" id="senha"
+               minlength="8"
+               require>
+           </p>
+
+           <p>
+            <input type="submit" value="Enviar">
+           </p>
         </fieldset>
     </form>
+    <p>
+        <a href="index.php">Voltar</a>
+    </p>
     <script src="script/script.js"></script>
 </body>
 </html>
