@@ -57,14 +57,6 @@
            </p>
 
            <p>
-               <label for="cep">CEP</label>
-               <input type="text" name="cep" id="cep" pattern="\d{5}-\d{3}"
-               maxlength="9" size="11"
-               placeholder="Seu CEP"
-               required>
-           </p>
-
-           <p>
                <label for="cidade">Cidade</label>
                <input type="text" name="cidade" id="cidade"
                maxlength="35"
@@ -107,17 +99,8 @@
            </p>
 
            <p>
-            <label for="user">Usuario</label>
-            <input type="text" name="user" id="user"
-            maxlength="15"
-            require>
-           </p>
-
-           <p>
-               <label for="senha">Senha</label>
-               <input type="password" name="senha" id="senha"
-               minlength="8"
-               require>
+            <label for="endereço">Endereço</label>
+            <input type="text" name="endereço" id="endereço">
            </p>
 
            <p>
