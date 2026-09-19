@@ -1,3 +1,41 @@
+<?php 
+    if(isset($_POST['submit']))
+        {
+        //print_r('Nome: ' . $_POST['nome']);
+        //print_r('<br>');
+        //print_r('Email: ' . $_POST['email']);
+        //print_r('<br>');
+        //print_r('Data de Nascimento: ' . $_POST['data_nascimento']);
+        //print_r('<br>');
+        //print_r('Telefone: ' . $_POST['telefone']);
+        //print_r('<br>');
+        //print_r('Sexo: ' . $_POST['sexo']);
+        //print_r('<br>');
+        //print_r('CPF: ' .   $_POST['cpf']);
+        //print_r('<br>');
+        //print_r('Cidade: ' . $_POST['cidade']);
+        //print_r('<br>');
+        //print_r('Estado: ' . $_POST['estado']);
+        //print_r('<br>');
+        //print_r('Endereço: ' .$_POST['endereco']);
+
+        include_once('config.php');
+
+        $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
+        $email = $_POST['email'];
+        $data_nascimento = $_POST['data_nascimento'];
+        $telefone = $_POST['telefone'];
+        $sexo = $_POST['sexo'];
+        $cpf = $_POST['cpf'];
+        $cidade = $_POST['cidade'];
+        $estado = $_POST['estado'];
+        $endereco = $_POST['endereco'];
+
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email, data_nascimento, telefone, sexo, cpf, cidade, estado, endereco) VALUES ('$nome', '$senha' '$email', '$data_nascimento', '$telefone', '$sexo', '$cpf', '$cidade', '$estado', '$endereco')");
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,6 +56,14 @@
                 <input type="text" name="nome" id="nome" 
                 placeholder="Seu nome"
                 required>
+            </p>
+
+            <p>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha"
+                placeholder="Digite sua senha"
+                minlength="8"
+                require>
             </p>
 
             <p>
@@ -44,8 +90,9 @@
 
             <p>
                 <label for="sexo">Sexo</label><br>
-                <input type="radio" name="sexo" id="sexmas" required> <label for="sexomas">Masculino</label>
-                <input type="radio" name="sexo" id="sexofem" required> <label for="sexofem">Feminino</label>
+                <input type="radio" name="sexo" id="sexmas" value="Masculino" required> <label for="sexomas">Masculino</label>
+                <input type="radio" name="sexo" id="sexofem" value="Feminino" required> <label for="sexofem">Feminino</label>
+                <input type="radio" name="sexo" id="sexoutro" value="Outro" required> <label for="sexoutro">Outro</label>
             </p>
 
            <p>
@@ -65,8 +112,8 @@
            </p>
 
            <p>
-               <label for="estados">Estado  </label>
-               <select name="" id="" required>
+               <label for="estado">Estado  </label>
+               <select name="estado" id="estado" required>
                <option value="">Selecione</option>
                <option value="ac">AC</option>
                <option value="al">AL</option>
@@ -99,12 +146,12 @@
            </p>
 
            <p>
-            <label for="endereço">Endereço</label>
-            <input type="text" name="endereço" id="endereço">
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco">
            </p>
 
            <p>
-            <input type="submit" value="Enviar">
+            <input type="submit" name="submit" value="Enviar">
            </p>
         </fieldset>
     </form>
