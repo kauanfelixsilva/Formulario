@@ -32,7 +32,7 @@
         $estado = $_POST['estado'];
         $endereco = $_POST['endereco'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email, data_nascimento, telefone, sexo, cpf, cidade, estado, endereco) VALUES ('$nome', '$senha' '$email', '$data_nascimento', '$telefone', '$sexo', '$cpf', '$cidade', '$estado', '$endereco')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, data_nascimento, telefone, sexo, cpf, cidade, estado, endereco) VALUES ('$nome', '$senha', '$email', '$data_nascimento', '$telefone', '$sexo', '$cpf', '$cidade', '$estado', '$endereco')");
         }
 ?>
 

@@ -9,8 +9,8 @@
     <h1>Login</h1>
     <form action="cadastro.php" method="post">
         <p>
-            <label for="user">Usuario</label>
             <input type="text" name="user" id="user"
+            placeholder="Email"
             minlength="5"
             require>
         </p>
