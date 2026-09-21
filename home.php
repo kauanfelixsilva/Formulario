@@ -2,6 +2,10 @@
 
     session_start();
 
+    header("Cache-Control: no-cache, no-store, must-revalidate");
+    header("Pragma: no-cache");
+    header("Expires: 0");
+
     // print_r($_SESSION);
 
     if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true ))
@@ -34,7 +38,7 @@
 
 <body>
 
-    <button><a href="index.php">Sair</a></button>
+    <button><a href="sair.php">Sair</a></button>
 
     <h1>Seja bem-vindo</h1>
 
