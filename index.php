@@ -10,9 +10,14 @@
 
     <title>Tela de login</title>
 
+    <!-- PASSO 6: Arquivo de estilo (CSS) -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
+<body class="centralizado">
+
+    <div class="caixa">
 
     <h1>Login</h1>
 
@@ -22,29 +27,29 @@
         <!-- PASSO 2: Campo de email -->
         <p>
 
-            <input type="text" name="email" id="email"
+            <label for="email">Email</label>
 
-            placeholder="Email"
+            <input type="text" name="email" id="email"
 
             minlength="5"
 
-            require>
+            required>
 
         </p>
 
         <!-- PASSO 3: Campo de senha (mínimo de 8 caracteres) -->
         <p>
 
-            <input type="password" name="senha" id="senha"
+            <label for="senha">Senha</label>
 
-            placeholder="Senha"
+            <input type="password" name="senha" id="senha"
 
             minlength="8">
 
         </p>
 
         <!-- PASSO 4: Botão que envia o formulário -->
-        <p>
+        <p class="acao">
 
             <input type="submit" name="submit" value="Enviar">
 
@@ -53,7 +58,9 @@
     </form>
 
     <!-- PASSO 5: Link para a página de cadastro de novos usuários -->
-    <p><button><a href="cadastro.php">Criar conta</a></button></p>
+    <a class="link" href="cadastro.php">Criar conta</a>
+
+    </div>
 
 </body>
 

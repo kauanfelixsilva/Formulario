@@ -38,15 +38,22 @@
 
     <title>Sistemas</title>
 
+    <!-- PASSO 7: Arquivo de estilo (CSS) -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
+<body class="centralizado">
 
-    <!-- PASSO 5: Botão de sair - chama o sair.php que apaga a sessão -->
-    <button><a href="sair.php">Sair</a></button>
+    <div class="caixa">
 
-    <!-- PASSO 6: Conteúdo da página, visível só para quem está logado -->
-    <h1>Seja bem-vindo</h1>
+        <!-- PASSO 6: Conteúdo da página, visível só para quem está logado -->
+        <h1>Seja Bem-Vindo</h1>
+
+        <!-- PASSO 5: Botão de sair - chama o sair.php que apaga a sessão -->
+        <p style="text-align: center; margin: 0;"><a class="botao" href="sair.php">Sair</a></p>
+
+    </div>
 
 </body>
 

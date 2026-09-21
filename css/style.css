@@ -1,0 +1,236 @@
+/* PASSO 1: Cores do site (variáveis) */
+:root {
+    --texto: #23272e;
+    --texto-suave: #5b6470;
+    --azul: #2f5d8a;
+    --azul-escuro: #244a6f;
+    --campo: #f1f3f5;
+    --borda: #d3d8de;
+    --sombra: 0 8px 24px rgba(30, 40, 60, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* PASSO 2: Fundo com degradê suave de cinza para branco */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, #b4bbc6, #f6f7f9) fixed;
+}
+
+/* PASSO 3: Deixa a caixa no centro da tela (login e home) */
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PASSO 4: Caixa branca com cantos arredondados e sombra leve */
+.caixa {
+    --largura-rotulo: 70px;
+    width: 100%;
+    max-width: 360px;
+    padding: 36px 32px 28px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+
+h1 {
+    margin: 0 0 28px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* PASSO 5: Cada linha do formulário = rótulo à esquerda + campo à direita */
+form p {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 18px;
+}
+
+label,
+.rotulo {
+    width: var(--largura-rotulo);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* PASSO 6: Campos com borda fina e destaque azul ao clicar */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='date'],
+select {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background: var(--campo);
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input::placeholder {
+    color: #8a929c;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--azul);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(47, 93, 138, 0.15);
+}
+
+input[type='radio'] {
+    accent-color: var(--azul);
+}
+
+/* PASSO 7: Botão azul de enviar / sair */
+.acao {
+    justify-content: center;
+    margin-top: 26px;
+}
+
+input[type='submit'],
+.botao {
+    display: inline-block;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 6px;
+    background: var(--azul);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type='submit']:hover,
+.botao:hover {
+    background: var(--azul-escuro);
+}
+
+.link {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--azul);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* PASSO 8: Página de cadastro - título em caixa branca, aba "Dados Pessoais" e painel branco */
+.pagina-larga {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-cadastro {
+    max-width: 260px;
+    margin: 0 auto 28px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    margin-bottom: 10px;
+    padding: 9px 24px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: var(--sombra);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campos {
+    --largura-rotulo: 150px;
+    padding: 36px 16px 24px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+
+.campos p {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opcoes {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 18px;
+}
+
+.opcoes label {
+    width: auto;
+    font-weight: normal;
+    text-align: left;
+}
+
+.opcoes input {
+    margin: 0 5px 0 0;
+}
+
+.voltar {
+    margin: 18px 0 0;
+    text-align: center;
+}
+
+.voltar a {
+    color: var(--azul-escuro);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.voltar a:hover {
+    text-decoration: underline;
+}
+
+/* PASSO 9: Celular - rótulo em cima do campo */
+@media (max-width: 520px) {
+    form p {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    label,
+    .rotulo {
+        width: auto;
+        text-align: left;
+    }
+
+    .acao {
+        align-items: center;
+    }
+}

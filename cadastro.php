@@ -82,22 +82,25 @@
 
     <title>Formulario</title>
 
+    <!-- PASSO 19: Arquivo de estilo (CSS) -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-    <h1>Cadastro</h1>
+    <div class="pagina-larga">
+
+    <h1 class="titulo-cadastro">Cadastro</h1>
 
     <!-- PASSO 5: Formulário que envia os dados (POST) para o próprio cadastro.php -->
     <form action="cadastro.php" method="post" autocomplete="on">
 
         <fieldset>
 
-            <h2>
+            <legend>Dados Pessoais</legend>
 
-                <legend>Dados Pessoais</legend>
-
-            </h2>
+            <div class="campos">
 
             <!-- PASSO 6: Campo de nome -->
             <p>
@@ -123,7 +126,7 @@
 
                 minlength="8"
 
-                require>
+                required>
 
             </p>
 
@@ -171,13 +174,17 @@
             <!-- PASSO 11: Escolha do sexo (radio buttons) -->
             <p>
 
-                <label for="sexo">Sexo</label><br>
+                <span class="rotulo">Sexo</span>
 
-                <input type="radio" name="sexo" id="sexmas" value="Masculino" required> <label for="sexomas">Masculino</label>
+                <span class="opcoes">
 
-                <input type="radio" name="sexo" id="sexofem" value="Feminino" required> <label for="sexofem">Feminino</label>
+                    <span><input type="radio" name="sexo" id="sexomas" value="Masculino" required><label for="sexomas">Masculino</label></span>
 
-                <input type="radio" name="sexo" id="sexoutro" value="Outro" required> <label for="sexoutro">Outro</label>
+                    <span><input type="radio" name="sexo" id="sexofem" value="Feminino" required><label for="sexofem">Feminino</label></span>
+
+                    <span><input type="radio" name="sexo" id="sexoutro" value="Outro" required><label for="sexoutro">Outro</label></span>
+
+                </span>
 
             </p>
 
@@ -288,22 +295,26 @@
            </p>
 
            <!-- PASSO 16: Botão que envia o formulário -->
-           <p>
+           <p class="acao">
 
             <input type="submit" name="submit" value="Enviar">
 
            </p>
+
+            </div>
 
         </fieldset>
 
     </form>
 
     <!-- PASSO 17: Link para voltar à tela de login -->
-    <p>
+    <p class="voltar">
 
         <a href="index.php">Voltar</a>
 
     </p>
+
+    </div>
 
     <!-- PASSO 18: Carregar o JavaScript com as máscaras de CPF e telefone -->
     <script src="script/script.js"></script>
