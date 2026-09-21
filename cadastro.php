@@ -1,5 +1,6 @@
 <?php
 
+    // PASSO 1: Só executa o PHP quando o formulário de cadastro for enviado
     if(isset($_POST['submit']))
 
         {
@@ -38,8 +39,10 @@
 
         //print_r('Endereço: ' .$_POST['endereco']);
 
+        // PASSO 2: Incluir a conexão com o banco de dados
         include_once('config.php');
 
+        // PASSO 3: Pegar cada campo enviado pelo formulário e guardar em variáveis
         $nome = $_POST['nome'];
 
         $senha = $_POST['senha'];
@@ -60,6 +63,7 @@
 
         $endereco = $_POST['endereco'];
 
+        // PASSO 4: Inserir os dados na tabela "usuarios" do banco
         $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, data_nascimento, telefone, sexo, cpf, cidade, estado, endereco) VALUES ('$nome', '$senha', '$email', '$data_nascimento', '$telefone', '$sexo', '$cpf', '$cidade', '$estado', '$endereco')");
 
         }
@@ -84,6 +88,7 @@
 
     <h1>Cadastro</h1>
 
+    <!-- PASSO 5: Formulário que envia os dados (POST) para o próprio cadastro.php -->
     <form action="cadastro.php" method="post" autocomplete="on">
 
         <fieldset>
@@ -94,6 +99,7 @@
 
             </h2>
 
+            <!-- PASSO 6: Campo de nome -->
             <p>
 
                 <label for="nome">Nome Completo</label>
@@ -106,6 +112,7 @@
 
             </p>
 
+            <!-- PASSO 7: Campo de senha (mínimo de 8 caracteres) -->
             <p>
 
                 <label for="senha">Senha</label>
@@ -120,6 +127,7 @@
 
             </p>
 
+            <!-- PASSO 8: Campo de email -->
             <p>
 
                 <label for="email">Email</label>
@@ -132,6 +140,7 @@
 
             </p>
 
+            <!-- PASSO 9: Campo de data de nascimento -->
             <p>
 
                 <label for="data_nascimento">Data de Nascimento</label>
@@ -142,6 +151,7 @@
 
             </p>
 
+            <!-- PASSO 10: Campo de telefone (formato (00) 90000-0000) -->
             <p>
 
                 <label for="telefone">Telefone</label>
@@ -158,6 +168,7 @@
 
             </p>
 
+            <!-- PASSO 11: Escolha do sexo (radio buttons) -->
             <p>
 
                 <label for="sexo">Sexo</label><br>
@@ -170,6 +181,7 @@
 
             </p>
 
+           <!-- PASSO 12: Campo de CPF (formato 000.000.000-00) -->
            <p>
 
                <label for="cpf">CPF</label>
@@ -184,6 +196,7 @@
 
            </p>
 
+           <!-- PASSO 13: Campo de cidade -->
            <p>
 
                <label for="cidade">Cidade</label>
@@ -198,6 +211,7 @@
 
            </p>
 
+           <!-- PASSO 14: Seleção do estado (lista com as UFs) -->
            <p>
 
                <label for="estado">Estado  </label>
@@ -264,6 +278,7 @@
 
            </p>
 
+           <!-- PASSO 15: Campo de endereço -->
            <p>
 
             <label for="endereco">Endereço</label>
@@ -272,6 +287,7 @@
 
            </p>
 
+           <!-- PASSO 16: Botão que envia o formulário -->
            <p>
 
             <input type="submit" name="submit" value="Enviar">
@@ -282,12 +298,14 @@
 
     </form>
 
+    <!-- PASSO 17: Link para voltar à tela de login -->
     <p>
 
         <a href="index.php">Voltar</a>
 
     </p>
 
+    <!-- PASSO 18: Carregar o JavaScript com as máscaras de CPF e telefone -->
     <script src="script/script.js"></script>
 
 </body>
