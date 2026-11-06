@@ -64,36 +64,6 @@ Projeto de estudo para praticar o desenvolvimento web com PHP. Ele permite:
 - Estilizar e organizar o layout com CSS, incluindo responsividade
 - Versionar o projeto com Git e GitHub
 
-## 🚀 Como executar o projeto
-
-1. Instale o [XAMPP](https://www.apachefriends.org/) e inicie o **Apache** e o **MySQL**.
-2. Copie a pasta do projeto para `C:\xampp\htdocs\Formulario`.
-3. Abra o **phpMyAdmin** (`http://localhost/phpmyadmin`) e crie o banco `Formulario` com a tabela `usuarios`:
-
-```sql
-CREATE DATABASE Formulario;
-USE Formulario;
-
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    senha VARCHAR(255) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    data_nascimento DATE NOT NULL,
-    telefone VARCHAR(15) NOT NULL,
-    sexo VARCHAR(10) NOT NULL,
-    cpf VARCHAR(14) NOT NULL,
-    cidade VARCHAR(35) NOT NULL,
-    estado VARCHAR(2) NOT NULL,
-    endereco VARCHAR(255)
-);
-```
-
-4. Confira os dados de conexão em `config.php` (por padrão: `localhost`, usuário `root`, sem senha).
-5. Acesse no navegador: `http://localhost/Formulario/`
-
-> **Observação:** o PHP precisa de um servidor para rodar, por isso o projeto não funciona no GitHub Pages.
-
 ## 👨‍💻 Autor
 
 **Kauan Felix da Silva**
